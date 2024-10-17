@@ -80,7 +80,7 @@ def call_openai_api(prompt: str, content: str) -> str:
     }
     api_endpoint: str = os.environ.get('OPENAI_API_ENDPOINT', 'https://api.openai.com/v1/chat/completions')
     response: requests.Response = requests.post(api_endpoint, headers=headers, data=json.dumps(data))
-    logging.info(f"header: {header}")
+    logging.info(f"headers: {headers}")
     logging.info(f"response: {response.json()}")
     return response.json()['choices'][0]['message']['content']
 
