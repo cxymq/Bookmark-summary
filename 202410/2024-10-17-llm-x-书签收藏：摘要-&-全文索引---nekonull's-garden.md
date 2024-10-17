@@ -44,3 +44,6 @@
    - **配置Github Actions**：将`bookmark_summary.yml`添加到书签存储库，替换存储库名。
    - **生成PAT**：创建Personal Access Token，添加到书签存储库的环境变量。
    - **测试**：添加书签，观察工作流是否正常运行，摘要存储库是否生成对应摘要。
+6. **笔者新增**：
+   - **推荐先试用 deepseek，注册完成有免费额度使用。当然，如果 chatgpt 有充值额度可忽略，否则会出现 429 http code。
+   - **`bookmark_summary` 存储库在添加 `process_changes.py` 时，同时创建 `data.json` 文件，并且写入内容 `[]`，避免 json 失败.
